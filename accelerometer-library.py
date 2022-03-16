@@ -1,5 +1,3 @@
-# https://www.blog.danishi.net/2020/04/23/post-3454/
-
 from mpu6050 import mpu6050
 from time import sleep
 

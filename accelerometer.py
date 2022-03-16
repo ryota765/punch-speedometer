@@ -1,5 +1,3 @@
-# https://hellobreak.net/raspberry-pi-mpu6050-csv/
-
 import smbus
 import math
 from time import sleep
