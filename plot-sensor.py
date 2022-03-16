@@ -92,7 +92,6 @@ def plot_loop():
         accel_z_lines.set_data(sec, accel_list_z)
 
         # X軸の更新
-        ax_temp.set_xlim((sec.min(), sec.max()))
         ax_gyro.set_xlim((sec.min(), sec.max()))
         ax_accel.set_xlim((sec.min(), sec.max()))
 
