@@ -1,5 +1,4 @@
 from mpu6050 import mpu6050
-from time import sleep
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,7 +28,7 @@ def initialize_plot(ax, title, sec, x0=0, y0=0, z0=0):
     return ax, x_list, x_lines, y_list, y_lines, z_list, z_lines
 
 
-def plot_loop():
+def main():
     # Fetch sensor data
     # temp = "%4.1f" % sensor.get_temp()
     # gyro_data = sensor.get_gyro_data()
@@ -38,7 +37,7 @@ def plot_loop():
     fig, (ax_accel, ax_vel) = plt.subplots(ncols=2, figsize=(10, 7))
 
     # x-axis
-    sec = np.arange(-1, 1, TIME_STEP)
+    sec = np.arange(0, 1, TIME_STEP)
 
     # Acceleration [m/s^2]
     (
@@ -115,4 +114,4 @@ def plot_loop():
 
 
 if __name__ == "__main__":
-    plot_loop()
+    main()
