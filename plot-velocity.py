@@ -96,21 +96,21 @@ def main():
         vel_y_lines.set_data(sec, vel_list_y)
         vel_z_lines.set_data(sec, vel_list_z)
 
-        # X軸の更新
+        # Update x-axis
         ax_accel.set_xlim((sec.min(), sec.max()))
         ax_vel.set_xlim((sec.min(), sec.max()))
 
         print(
-            "【加速度】 x:"
+            "acceleration x:"
             + "%6.3f" % accel_data["x"]
             + " y:"
             + "%6.3f" % accel_data["y"]
             + " z:"
             + "%6.3f" % accel_data["z"]
         )
-        print("【速度】 x:" + "%6.3f" % vx + " y:" + "%6.3f" % vy + " z:" + "%6.3f" % vz)
+        print("velocity x:" + "%6.3f" % vx + " y:" + "%6.3f" % vy + " z:" + "%6.3f" % vz)
 
-        plt.pause(TIME_STEP)  # sleep時間（秒）
+        plt.pause(TIME_STEP)  # sleep time (seconds)
 
 
 if __name__ == "__main__":
